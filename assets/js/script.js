@@ -1,92 +1,114 @@
-const timerEl = document.querySelector('#time-remaining');
 const card = document.querySelector('#question-card');
-const cardHeader = document.querySelector('#card-header');
+const questionText = document.querySelector('#question');
 const cardBody = document.querySelector('#card-body');
 const cardFooter = document.querySelector('#card-body');
 
 const startButton = document.querySelector('#start-btn');
 
+const timerEl = document.querySelector('#time-remaining');
 const timerDelay = 1000;
 const startingTime = 59;
 
 
-const myQuestions = [
+
+let myQuestions = [
     {
-      question: "Arrays in JavaScript can be used to store _______.",
-      answers: {
-        1.: "numbers and strings",
-        2.: "other arrays",
-        3.: "booleans",
-        4.: "all of the above"
-      },
-      correctAnswer: "4."
+        question: "Arrays in JavaScript can be used to store _______.",
+        answer: "4.",
+        options: {
+            1.: "Numbers and Strings",
+            2.: "Other Arrays",
+            3.: "Booleans",
+            4.: "All of the above"
+        }
     },
+
     {
-      question: "The condition in an if / else statement is enclosed with ____.",
-      answers: {
-        1.: "quotes",
-        2.: "curly brackets",
-        3.: "parenthesis",
-        4.: "square brackets"
-      },
-      correctAnswer: "3."
+        question: "The condition in an if / else statement is enclosed with ____.",
+        answer: "3.",
+        options: {
+            1.: "Quotes",
+            2.: "Curly Brackets",
+            3.: "Parenthesis",
+            4.: "Square Brackets"
+        }
     },
+
     {
-      question: "Commonly used data types DO NOT include:",
-      answers: {
-        1.: "strings",
-        2.: "booleans",
-        3.: "alerts",
-        4.: "numbers"
-      },
-      correctAnswer: "3."
+        question: "Commonly used data types DO NOT include:",
+        answer: "3.",
+        options: {
+            1.: "Strings",
+            2.: "Booleans",
+            3.: "Alerts",
+            4.: "Numbers"
+        }
     },
+
     {
         question: "A very useful tool used during development and debugging for printing content to the debugger is:",
-        answers: {
+        answer: "1.",
+        options: {
             1.: "console.log",
-            2.: "terminal / bash",
-            3.: "for loops",
+            2.: "Terminal / Bash",
+            3.: "For Loops",
             4.: "JavaScript",
-        },
-        correctAnswer: "1."
+        }
     },
+
     {
         question: "String values must be enclosed within _____ when being assigned to variables.",
-        answers: {
-            1.: "commas",
-            2.: "quotes",
-            3.: "curly brackets",
-            4.: "parenthesis"
-        },
-        correctAnswer: "2."
+        answer: "2.",
+        options: {
+            1.: "Commas",
+            2.: "Quotes",
+            3.: "Curly Brackets",
+            4.: "Parenthesis"
+        }
     }
   ];
 
-function buildQuiz(){
-    var output = [];
+  
 
-    // for each question 
-    myQuestions.forEach(
-        (currentQuestion, questionNumber) =>  {
-            // variable to store the answers
-            var answers = [];
-        }
-    )
+
+  /////////
+
+
+
+  
+
+
+  /////////
+
+
+  // if start button is pressed: 
+  startButton.onclick = () => {
+      showQuestions(0);
+      if(questionCount > myQuestions.length -1) {
+        questionCount++;
+        showQuestions(questionCount);
+    } else {
+        console.log("Questions Completed")
+    }
+      showQuestions(1);
+      showQuestions(2);
+      showQuestions(3);
+      showQuestions(4);
+  }
+
+  let questionCount = 0;
+/// Inserting questions and options from array
+function showQuestions (index) {
+    const questionText = document.querySelector(".card-header");
+    const answers = document.querySelector(".answers");
+    let question = '<h2>' + myQuestions[index].question + '</h2>';
+    let options = '<div class="options">' + myQuestions[index].options[1.] + '<span></span></div>'
+                    + '<div class="options">' + myQuestions[index].options[2.] + '<span></span></div>'
+                    + '<div class="options">' + myQuestions[index].options[3.] + '<span></span></div>'
+                    + '<div class="options">' + myQuestions[index].options[4.] + '<span></span></div>';
+    questionText.innerHTML = question;
+    answers.innerHTML = options;
 }
-
-function showResults(){}
-
-
-
-
-
-// display quiz right away
-buildQuiz();
-
-// on submit, show results
-submitButton.addEventListener('click', showResults);
-
 
 
 
