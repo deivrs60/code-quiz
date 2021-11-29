@@ -1,4 +1,4 @@
-const card = document.querySelector('#question-card');
+6const card = document.querySelector('#question-card');
 const questionText = document.querySelector('#question');
 const cardBody = document.querySelector('#card-body');
 const cardFooter = document.querySelector('#card-footer');
@@ -163,19 +163,6 @@ if (localStorage.getItem("hScores")) {
     })
 }
 ///////////////////////////////////////////////////////////////////////////////
-
-
-
-var hScores = [];
-// If hScores exists in localStorage
-if (localStorage.getItem("hScores")) {
-    // import it
-    hScores = JSON.parse(localStorage.getItem("hScores"));
-    // display it on the page
-    hScores.forEach(function (oneScore) {
-        $(".hs-list").append($("<li>").text(oneScore));
-    })
-}
 
 
 card.addEventListener("click", handleOptionEvents);
