@@ -53,24 +53,31 @@
                                 <span id="score">0</span>
                             </p>
                         </div>
+                        
                     </div>
                </div>
             </div>
             
 
-             <!--Results Box -->
-             <div class="result-box">
-                 <div class="quiz-complete"> You've finished the quiz!</div>
-                    </br>
-                 <div class="score-text">
-                    <span> You got a score of ___!</span>
-                         </br>
-                    <p>If you'd like to retry, click on the button above!</p>
-                     
-                 </div>
-
              </div>
+
+                 <!--Results Box -->
+             <div class="result-box" id="results">
+                <div class="quiz-complete"> You've finished the quiz!</div>
+                   </br>
+                <div class="score-text">
+                   <span> You got a score of <p class="score"></p></span>
+                </br>
+                <form>
+                   <label for="name">Enter Your Initials</label>
+                   <input type="text" placeholder="Press 'Tab' to input initials" id="name" name="name" class="form-input" />
+                   <button type="submit"> Save Score</button>
+               </form>
+
                
+                   <p>If you'd like to retry, click the "Start Quiz" button above!</p>
+                    
+                </div>
         </main>
 
 

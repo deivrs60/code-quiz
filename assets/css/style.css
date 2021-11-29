@@ -37,6 +37,10 @@ body {
     border-radius: 15px 15px 0 0;
 }
 
+.card-header {
+    font-size: 15px;
+}
+
 .header {
     position: absolute;
     top: 10%;
@@ -145,7 +149,7 @@ body {
     justify-content: space-between;
     background: #8f4e8f;
     border-radius: 0 0 15px 15px;
-    padding-left: 240px;
+    padding-left: 200px;
 
 }
 #current-score {
@@ -165,5 +169,10 @@ body {
     text-align: center;
     opacity: 0;
     pointer-events: none;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, 10%) scale(1);
+    z-index: 999;
+}
+
+#result-box {
+    opacity: 1;
 }
