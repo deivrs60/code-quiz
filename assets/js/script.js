@@ -1,4 +1,4 @@
-6const card = document.querySelector('#question-card');
+const card = document.querySelector('#question-card');
 const questionText = document.querySelector('#question');
 const cardBody = document.querySelector('#card-body');
 const cardFooter = document.querySelector('#card-footer');
