@@ -9,8 +9,10 @@ An online quiz that tests your knowledge about JavaScript functionality and synt
 * JavaScript 
 
 ## Website 
+https://deivrs60.github.io/code-quiz/
 
 ## Github Repository Link 
+https://github.com/deivrs60/code-quiz
 
 ## Current Bugs:
 * When showResults() is called, the input field + Save Score button are not able to be clicked, despite having a z-index of 999. --- That means that saving and trying to view high scores does not work. 
